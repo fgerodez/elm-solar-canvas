@@ -9,6 +9,7 @@ import Canvas.Texture exposing (Texture, loadFromImageUrl)
 import Color exposing (rgba)
 import Html exposing (Html)
 import Time exposing (Posix, toMillis, toSecond, utc)
+import Canvas.Settings.Advanced exposing (GlobalCompositeOperationMode(..))
 
 
 main : Program () Model Msg
@@ -168,7 +169,7 @@ drawScene model =
             renderTexture [] ( 0, 0 ) model.sun
     in
     group
-        [ compositeOperationMode Canvas.Settings.Advanced.DestinationOver
+        [ compositeOperationMode DestinationOver
         , fill (rgba 0 0 0 0.4)
         ]
         [ group
