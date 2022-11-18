@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Elm Solar System</title>
+  </head>
+
+  <body>
+    <div id="elm-app-is-loaded-here"></div>
+    <script src="./elm-canvas.js"></script>
+    <script src="./elm.js"></script>
+    <script>
+      var app = Elm.Solar.init({
+        node: document.getElementById("elm-app-is-loaded-here")
+      });      
+    </script>
+
+	<p>Elm implementation of an example found at <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Mozilla canvas doc</a></p>
+  </body>
+</html>
